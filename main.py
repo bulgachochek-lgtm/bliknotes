@@ -1,13 +1,15 @@
+import os
 import logging
-logging.basicConfig(level=logging.INFO)
-
-print("TOKEN:", TOKEN)
-
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-import os
+logging.basicConfig(level=logging.INFO)
+
 TOKEN = os.getenv("BOT_TOKEN")
+
+print("TOKEN:", TOKEN)  # временно для проверки
+
+CHAT_ID = -1003702231807
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = """🎬 Оставьте заметку о фильме в таком формате:
