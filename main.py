@@ -1,3 +1,8 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
+print("TOKEN:", TOKEN)
+
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
